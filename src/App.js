@@ -1,24 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+// import SwirlShortVideos from './SwirlShortVideos';
+import { SwirlShortVideos } from "swirl-short-videos-typescript"
 function App() {
+  const queryParams = Object.fromEntries(new URLSearchParams(window.location.search));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    // <SwirlShortVideos dataCode="ifitdn8f" dataPlalistCode="bD7Nkw" />
+    <>
+      <SwirlShortVideos dataCode={queryParams?.usercode ? queryParams?.usercode : "ifitdn8f"} dataPlalistCode={queryParams?.playlistcode ? queryParams?.playlistcode : "bD7Nkw"} />
+    </>
   );
 }
 
