@@ -12,7 +12,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          {/* <Route path="/typescript" element={<TypeScriptComp />} /> */}
+          <Route path="/typescript" element={<TypeScriptComp />} />
           <Route path="/javascript" element={<JavascriptComp />} />
           <Route path="/" element={<JavascriptComp />} />
           <Route path="*" element={<h3>404 Page Not Found !</h3>} />
