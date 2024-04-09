@@ -1,1 +1,7 @@
-@import url("https://apigoswirl.com/short_video/react/v12/typescript/swirl-short-videos-type-v1.min.css");
+/* @import url("https://apigoswirl.com/short_video/react/v12/typescript/swirl-short-videos-type-v1.min.css"); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

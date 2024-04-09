@@ -1,14 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-// import SwirlShortVideos from './SwirlShortVideos';
-import { SwirlShortVideos } from "swirl-short-videos-typescript"
-function App() {
-  const queryParams = Object.fromEntries(new URLSearchParams(window.location.search));
-  return (
 
-    // <SwirlShortVideos dataCode="ifitdn8f" dataPlalistCode="bD7Nkw" />
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import JavascriptComp from './JavascriptComp';
+import TypeScriptComp from './TypeScriptComp';
+
+// import SwirlShortVideos from './SwirlShortVideos';
+
+function App() {
+
+  return (
     <>
-      <SwirlShortVideos dataCode={queryParams?.usercode ? queryParams?.usercode : "ifitdn8f"} dataPlalistCode={queryParams?.playlistcode ? queryParams?.playlistcode : "bD7Nkw"} />
+      <Router>
+        <Routes>
+          <Route path="/typescript" element={<TypeScriptComp />} />
+          <Route path="/javascript" element={<JavascriptComp />} />
+          <Route path="/" element={<JavascriptComp />} />
+          <Route path="*" element={<h3>404 Page Not Found !</h3>} />
+        </Routes>
+      </Router>
     </>
   );
 }
