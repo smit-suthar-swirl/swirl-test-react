@@ -1,6 +1,6 @@
 import React from 'react'
 import { SwirlShortVideos } from 'swirl-short-videos';
-import "./javascript.css"
+// import "./javascript.css"
 import { Link } from 'react-router-dom';
 const JavascriptComp = () => {
     const queryParams = Object.fromEntries(new URLSearchParams(window.location.search));

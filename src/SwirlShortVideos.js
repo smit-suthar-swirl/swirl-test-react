@@ -10,7 +10,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useCallback } from "react";
 // import moment from "moment";
-import "./ssv.css"
+// import "./ssv.css"
 const ReviewCompoNent = ({ skuCode, height, show }) => {
     const [reviewData, setreviewData] = useState([])
     const [loading, setLoading] = useState(true)
